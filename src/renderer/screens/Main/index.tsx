@@ -13,6 +13,7 @@ import Http from "../../../Http/Http.js";
 import routes from "../../../routes/URLs.js";
 import isValidate from "Functions/loginValidations";
 import { useAsyncValue, useNavigate } from "react-router-dom";
+import saveAuthenticationData   from '../../../Functions/saveAuthenticationData';
 
 export function MainScreen() {
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ export function MainScreen() {
         password: password,
       })
         .then((response) => {
-
+          const data     = response.data;
+          saveAuthenticationData(data.authorisation.token,data.authorisation.expires_at, data.user.id)
           navigate("/HomeScreen");
         })
         .catch(

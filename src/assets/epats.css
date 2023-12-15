@@ -1,7 +1,7 @@
 
 body {
   font-family: 'roboto', sans-serif !important ;
-  background-color:#f7f8fbfc!important;
+  /* background-color:#f7f8fbfc!important; */
 }
 .container {
   padding: 50px;
@@ -54,12 +54,10 @@ height: 40px  !important;
 
 .menuIcon {
    font-size: 38px !important;
-   padding:10px !important;
-   background: #007AFF !important;
 }
 .topNavigation {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
-  height: 50px;
+  /* height: ih; */
 }
 .closeButton {
     border-radius:25px !important;
@@ -75,14 +73,15 @@ height: 40px  !important;
    float: right !important;
 }
 .iconMenu {
-  font-size:70px !important;
-  color: #a5a8b0;
+  font-size:40px !important;
+  color: #99caff;
 }
 .menuText: {
-  font-size: 34px;
+  font-size: 54px !important;
   color: #000 !important;
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   font-family:'roboto', sans-serif;
+  margin-top: 40px;
 }
 .menuItem {
     display: flex;
@@ -100,9 +99,10 @@ height: 40px  !important;
 }
 .menuItem:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  color: #000 !important;
+  /* color: #000 !important; */
   font-weight: '400' !important,
   font-family: 'roboto', sans-serif !important;
+  color: #007BFF !important;
 }
 
 .toggleSwitch {
