@@ -1,0 +1,240 @@
+
+body {
+  font-family: 'roboto', sans-serif !important ;
+  background-color:#f7f8fbfc!important;
+}
+.container {
+  padding: 50px;
+}
+.bg {
+font-family: 'roboto',sans-serif !important;
+}
+.form-group {
+  margin: 10px 20px;
+}
+.text-heading{
+display:flex;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100vh !important;
+    text-align: center !important;
+    height:100vh !important;
+    flex-direction: column;
+    padding:40px;
+}
+/* Corrected the typo in "h3" and removed unnecessary ">" */
+.input-group {
+margin-top:40px;
+}
+.input {
+  width: 100% !important;
+  background:#fff !important;
+}
+
+.loginInputs  {
+display:flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction:column;
+ width:360px !important;
+  align-items: center !important;
+  justify-content: center !important;
+ margin:  auto  200px !important;
+}
+.btnSubmit {
+margin-top:50px  !important;
+border-radius: 25px !important;
+width:50% !important;
+background-color: #000 !important;
+float: right !important;
+margin-left:170px;
+height: 40px  !important;
+}
+
+
+.menuIcon {
+   font-size: 38px !important;
+   padding:10px !important;
+   background: #007AFF !important;
+}
+.topNavigation {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  height: 50px;
+}
+.closeButton {
+    border-radius:25px !important;
+}
+.drawerTitle {
+  color: #007AFF !important;
+  font-size: 24px !important;
+  font-family: 'roboto', sans-serif !important;
+  font-weight: 600 !important;
+}
+.btnSignOut {
+   padding:10px !important;
+   float: right !important;
+}
+.iconMenu {
+  font-size:70px !important;
+  color: #a5a8b0;
+}
+.menuText: {
+  font-size: 34px;
+  color: #000 !important;
+  font-weight: 300 !important;
+  font-family:'roboto', sans-serif;
+}
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+    margin-top:20px;
+    width:120px;
+    border-radius:14px;
+    height:120px;
+    margin:15px !important;
+    background-color: #fff;
+    border: 1px solid #F0F1F3;
+}
+.menuItem:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000 !important;
+  font-weight: '400' !important,
+  font-family: 'roboto', sans-serif !important;
+}
+
+.toggleSwitch {
+   margin-top:50px !important;
+}
+.optionTitle {
+font-size:18px;
+  font-weight:600 !important;
+  color: #000 !important;
+  padding:10px;
+  border:1px solid #eee
+}
+.options {
+  background-color: #ffffff !important;
+  border: 1px solid #eee;
+  width:301px !important;
+  border-radius:15px;
+  margin-top:60px;
+  margin:50px auto !important;
+}
+.login-page-left{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-page-right{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.optionText {
+   padding-bottom:10px
+}
+.optionBody {
+   padding:10px !important;
+   font-family: 'roboto' !important;
+   color: #999 !important;
+   font-weight:200
+}
+.search {
+  height:50px
+}
+.formSectionTitle {
+background:#f1f1f1;
+ padding:6px;
+ border-radius:25px;
+ width:inherit
+}
+.formSectionTitle > h5 {
+color: #000 !important;
+font-weight:400;
+font-size: 16px;
+}
+.formGroup {
+   margin:24px;
+}
+#patientDetails{
+  padding:10px;
+}
+.personalDetails{
+margin-to:0px !important;
+   background-color: #FFF !important;
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  Add your box shadow styles here */
+}
+.profile {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+h4 , .profileImage{
+   font-family:'roboto',sans-serif !important;
+   padding:0px;
+   color:#000;
+}
+.profileImage {
+  /*border:1px solid #eee !important; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.data {
+
+  align-items: center;
+  justify-content: center;
+}
+.data-segments {
+  border-bottom: 1px solid #eee !important;
+}
+.data-segments {
+color: #AAA !important;
+font-weight:300 !important;
+font-size:14px   ;
+font-family:'roboto' !important;
+}
+h5 {
+font-size:12px;
+color:#000 !important;
+font-family: 'roboto' !important;
+font-weight:400 !important;
+padding:10px !important;
+}
+.segment-items {
+ display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+ .segment-item {
+   width:33.3% !important;
+ text-align: center !important;
+ }
+ .nav-tabs{
+   border:1px !important;
+   font-family: 'roboto' !important;
+   background-color: #FFE !important;
+ }
+ .nav-link.active {
+  border: none !important!
+  border-radius: 0 !important;
+  border-top: 0px;
+  border-bottom: 4px solid #007AFF !important;
+  color:#007AFF !important;
+ }
+ ul > li {
+ font-family: 'roboto' !important;
+ color: #AAA !important;
+ }
+ li > button {
+   border:1px !important;
+   color: #AAA !important;
+ }

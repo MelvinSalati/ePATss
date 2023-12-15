@@ -1,0 +1,40 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+
+
+.filter-input {
+  background: #F1F1F1 !important;
+  border-radius:25px !important;
+  marginTop:50px !important;
+}
+.btn-numbered-page {
+   padding:10px !important;
+   border: 1px solid #eee;
+    width:40px !important;
+    height:40px !important;
+     text-align:center !important;
+   }
+  .btn-numbered-page.active {
+    background: #000 !important;
+    width:40px !important;
+    height:40px !important;
+    text-align:center !important;
+    color: #fff
+  }
+  nav > ul {
+  padding:8px;
+  border-top: 1px solid #eee;
+  background: #eee
+  }
+  .btn-first-page, .btn-prev-page, btn-next-page, .btn-last-page{
+               width:40px !important;
+                  height:40px !important;
+                  text-align:center !important;
+                  display: flex;
+                  flex-direction:column;
+  }
+
+
+tr > td {
+  font-weight:100 !important;
+  font-family: 'roboto', sans-serif
+}

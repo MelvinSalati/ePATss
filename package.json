@@ -1,13 +1,13 @@
 {
-  "displayName": "My Awesome Electron App",
-  "name": "my-awesome-electron-app",
-  "description": "Your awesome app description",
+  "displayName": "ePATS",
+  "name": "ePATS",
+  "description": "An eletronic patient appointment and tracking system that leverages trending and latest technologies, to provide a proficiently secure  and robust platform. ",
   "version": "2.0.6",
   "main": "./node_modules/.dev/main/index.js",
   "resources": "src/resources",
   "author": {
-    "name": "Dalton Menezes",
-    "email": "daltonmenezes@outlook.com"
+    "name": "Melvin Salati",
+    "email": "melvinsalati@gmail.com"
   },
   "license": "MIT",
   "scripts": {
@@ -24,10 +24,26 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/material": "^5.14.20",
+    "axios": "^1.6.2",
     "electron-router-dom": "^1.0.5",
+    "initials": "^3.1.2",
+    "material-design-icons": "^3.0.1",
+    "notiflix": "^3.2.6",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.2"
+    "react-filterable-table": "^0.3.442",
+    "react-router-dom": "^6.14.2",
+    "rsuite": "^5.46.1",
+    "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
@@ -42,6 +58,7 @@
     "electron": "^25.3.2",
     "electron-builder": "^23.6.0",
     "electron-extension-installer": "^1.2.0",
+    "electron-reload": "^2.0.0-alpha.1",
     "electron-vite": "^1.0.27",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^8.9.0",
@@ -57,7 +74,13 @@
     "semver": "^7.5.4",
     "typescript": "^5.1.6",
     "vite": "^4.4.8",
-    "vite-tsconfig-paths": "^4.2.0"
+    "vite-tsconfig-paths": "^4.2.0",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,ts}": [
