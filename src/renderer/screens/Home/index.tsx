@@ -43,7 +43,7 @@ import TaskIcon from "@rsuite/icons/Task";
 import Http from "../../../Http/Http.js";
 import routes from "../../../Routes/URLs.js";
 import { DrawerMenu, Navigation } from "renderer/components";
-
+import Notiflix from 'Notiflix'
 const data = [
   { value: "F", label: "Female" },
   { value: "M", label: "Male" },
@@ -278,7 +278,7 @@ export function HomeScreen(props) {
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={24}>
                   <FlexboxGrid>
-                    <FlexboxGrid.Item colspan={24} className="menuLeft">
+                    <FlexboxGrid.Item colspan={24} className="menuLef">
                       <div className="options">
                         <div className="optionTitle">Add Recipient</div>
                         <div className="optionBody">
@@ -397,10 +397,7 @@ export function HomeScreen(props) {
                 <FlexboxGrid.Item colspan={24}>
                   <div className="formGroup">
                     <Input as="textarea" rows={3} placeholder="A complete address " onChange={(text) => { setAddress(text) }} />
-                  </div>
-
-
-                </FlexboxGrid.Item>
+                  </div>  </FlexboxGrid.Item>
               </FlexboxGrid>
             </Modal.Body>
             <Modal.Footer>

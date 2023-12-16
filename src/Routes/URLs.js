@@ -13,6 +13,10 @@ const routes = {
     streams: 'api/v1/epats/streams',
     binding: 'api/v1/epats/binding',
   },
+  streams: {
+    create: 'api/v1/epats/create',
+    list: 'api/v1/epats/streams',
+  },
 }
 
 export default routes

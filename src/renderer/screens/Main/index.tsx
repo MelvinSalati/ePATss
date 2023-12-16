@@ -121,11 +121,10 @@ export function MainScreen() {
                   <PeoplesIcon color={"#007BFF"} />
                 </InputGroup.Addon>
               </InputGroup>
-              <InputGroup size={"lg"} className="input-group">
+              <InputGroup size={"lg"} style={{marginTop:50}}>
                 <Input
                   placeholder="Password"
                   type="password"
-                  className="input"
                   onChange={passwordHandler}
                 />
                 <InputGroup.Addon>

@@ -30,7 +30,15 @@ margin-top:40px;
   width: 100% !important;
   background:#fff !important;
 }
+.accordion-button[aria-expanded="true"] {
+  /* Styles for when the accordion button is expanded */
+  background-color: #FFF !important;
+}
 
+.accordion-button[aria-expanded="false"] {
+  /* Styles for when the accordion button is collapsed */
+    background-color: #FFF !important;
+}
 .loginInputs  {
 display:flex;
     align-items: center !important;
@@ -104,9 +112,18 @@ height: 40px  !important;
   font-family: 'roboto', sans-serif !important;
   color: #007BFF !important;
 }
+.accordionCustom {
+  padding: 0 !important;
+}
+.accordionCustomItem {
+  border-radius: 0 !important;
+}
+.acccordion-header : focus  {
+  background: #FFF !important;
+}
 
 .toggleSwitch {
-   margin-top:50px !important;
+   /* margin-top:50px !important; */
 }
 .optionTitle {
 font-size:18px;
@@ -120,7 +137,7 @@ font-size:18px;
   border: 1px solid #eee;
   width:301px !important;
   border-radius:15px;
-  margin-top:60px;
+  /* margin-top:60px; */
   margin:50px auto !important;
 }
 .login-page-left{

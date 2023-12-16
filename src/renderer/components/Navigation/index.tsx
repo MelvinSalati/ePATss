@@ -1,3 +1,4 @@
+import {useNavigate} from 'react-router-dom';
 import React,{useState} from 'react';
 import MenuIcon from '@rsuite/icons/Menu';
 import OffIcon from '@rsuite/icons/Off';
@@ -15,13 +16,12 @@ import { faDatabase, faUser, faPhone, faEnvelope, faIdCardClip, faFingerprint, f
 import {FlexboxGrid , IconButton, Drawer } from 'rsuite';
 
 export function Navigation () {
-
+  const navigate           = useNavigate();
   const [open, setOpen ]   = useState(false);
 
   const openMenuDrawer     = (state) => {
     setOpen(state);
   }
-
 
   return <>
   <div className="topNavigation" style={{ boxShadow: " 0px 2px 4px rgba(0, 0, 0, 1)", borderBottom: '1px solid #eee' }}>
@@ -52,7 +52,7 @@ export function Navigation () {
          <Drawer.Body style={{ padding: 0, backgroundColor: "#fbfbfb" }}>
            <FlexboxGrid style={{marginTop:60}}>
              <FlexboxGrid.Item colspan={8}>
-               <div className="menuItem">
+               <div className="menuItem"  onClick={()=>{navigate('/HomeScreen')}}>
                  {/* menu iocn*/}
                  <SearchIcon className="iconMenu" size="lg"/>
                  {/* menu title*/}
@@ -109,7 +109,7 @@ export function Navigation () {
 
              </FlexboxGrid.Item>
              <FlexboxGrid.Item colspan={8}>
-               <div className="menuItem">
+               <div className="menuItem" onClick={()=>{navigate('/StreamsScreen')}}>
                  {/* menu iocn*/}
                  <PeopleBranchIcon  className="iconMenu"  />
                  <h5 className="menuText">Streams</h5>

@@ -23,7 +23,7 @@
   nav > ul {
   padding:8px;
   border-top: 1px solid #eee;
-  background: #eee
+  /* background: #eee */
   }
   .btn-first-page, .btn-prev-page, btn-next-page, .btn-last-page{
                width:40px !important;
