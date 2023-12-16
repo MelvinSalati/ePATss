@@ -16,6 +16,7 @@ const routes = {
   streams: {
     create: 'api/v1/epats/create',
     list: 'api/v1/epats/streams',
+    enroll: 'api/v1/epats/enroll',
   },
 }
 

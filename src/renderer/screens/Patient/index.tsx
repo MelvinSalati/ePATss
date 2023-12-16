@@ -13,6 +13,7 @@ import {
   ButtonGroup,
   Drawer,
   Input,
+  IconButton,
   InputGroup,
 } from 'rsuite';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -45,16 +46,51 @@ import EyeCloseIcon from '@rsuite/icons/EyeClose';
 import Http from '../../../Http/Http.js'
 import routes from '../../../Routes/URLs.js';
 import authorizeAccess from "../../../Functions/authorizeAccess.js";
+import Notiflix from 'Notiflix';
+import PlusIcon from '@rsuite/icons/Plus';
+import { Spinner } from "react-activity";
+import "react-activity/dist/library.css"
+//streams enroolled  in
 
-
+const streamsEnrolledFields  =  [
+  {
+    displayName: 'SN',
+    inputFilterable: false,
+    name: 'sn'
+  },
+  {
+    displayName: 'Stream',
+    inputFilterable: false,
+    name: 'stream_name'
+  },
+  {
+    displayName: 'Created On',
+    inputFilterable: false,
+    name: 'created_at'
+  },
+  {
+    displayName: '',
+    inputFilterable: false,
+    name: '',
+    render: (props)=> {
+      return <>
+        <IconButton icon={<PlusIcon/>} appearance="primary">Select</IconButton>
+      </>
+    }
+  }
+];
 
 export function PatientScreen(props) {
 
   const [key, setKey] = useState('home');
+
   const location = useLocation();
+
   const avatarData = initials(location.state.fname + "," + location.state.lname);
   const [allowRescheduling, setAllowRescheduling] = useState(false);
-  const [openStreamsDrawer, setOpenStreamsDrawer] = React.useState(false);
+  const [openStreamsDrawer, setOpenStreamsDrawer] = useState(false);
+  const [patientStreams, setPatientStreams]       = useState([]);
+
   const navigate           =  useNavigate();
 
   const [streamsList, setStreamsList]             = useState([]);
@@ -75,7 +111,7 @@ export function PatientScreen(props) {
        try {
          const response = await Http.get(routes.streams.list);
          setStreamsList(response.data);
-         console.log("id"+response.data)
+         console.log(response.data)
        } catch (error) {
          // Handle the error (e.g., display an error message)
          console.error(error.message);
@@ -89,8 +125,25 @@ const addStream  = async () => {
   {
     const response = await Http.post(routes.streams.add,{
       id: location.state.id,
-    })
+    });
+
   } catch(error){
+    console.log(error)
+  }
+}
+
+const enrollPatientInStream   = async (streamId) => {
+  console.log(location)
+  try {
+    const response =  await Http.post(routes.streams.enroll,{
+      patient: location.state.id,
+      stream: streamId,
+     })
+     Notiflix.Notify.success("Patient enrolled in the Stream");
+     setOpenStreamsDrawer(false);
+  } catch (error) {
+    // error handling
+    Notiflix.Notify.failure(error.response.data.msg);
     console.log(error)
   }
 }
@@ -172,6 +225,7 @@ const addStream  = async () => {
               <h5 style={{borderBottom:"1px solid #ddd"}}>Current Streams     <Button onClick={()=>{setOpenStreamsDrawer(true)}} size="sm" appearance="primary" className="float-end"><FontAwesomeIcon icon={faFolderTree}/>  Register In Stream</Button>
                                                                                      </h5>
              </div>
+             <Spinner />
             </Tab>
             <Tab eventKey="appointments" title={<div> <FontAwesomeIcon icon={faCalendarDays} />   Appointments</div>}>
 
@@ -213,7 +267,10 @@ const addStream  = async () => {
                  <Accordion.Body className="accordionCustom">
                    {/** Data storage **/}
                    <ListGroup defaultActiveKey="#art">
-                     <ListGroup.Item action className="accordionCustomItem  bg-white border-0 text-muted" >
+                     <ListGroup.Item action className="accordionCustomItem  bg-white border-0 text-muted"
+                     onClick={()=>{
+                       enrollPatientInStream(item.id);
+                     }} >
                        <FontAwesomeIcon icon={faPlugCirclePlus} /> Initiate Stream
                      </ListGroup.Item>
                      <ListGroup.Item action href="#link2" disabled>
